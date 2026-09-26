@@ -28,7 +28,6 @@ set TIME=2 (set CHR=UTF-8);   | 延时 2 秒执行括号中的命令
 文件 / 目录
 
 
-
 read ABCD.txt & set (A='(read ABCD.txt)') & out A --E;   | 读文件内容赋给 A
 make ABC.md (PATH=C:\abcde\abc) & set (ABC.md="内容");   | 建文件并写入内容
 make ABCD (PATH=C:\abcde\abc);                           | 建文件夹
@@ -36,7 +35,6 @@ make ABC.fs TO abc_abcd.exe PATH=C:\ABCD\123;            | 编译为 exe（未�
 
 
 运行 / 系统
-
 
 
 run "工具.exe";                 | 启动文件
@@ -88,7 +86,6 @@ ADD('2','3');        | 参数带单引号 → 原样文本（输出 和=2+3）
 在文件开头启用插件：
 
 
-
 INSERT SYSTEM FROM Default;              | 系统插件（自带）
 
 
@@ -104,9 +101,6 @@ INSERT MADE-P FROM Default & PF=TRUE;    | 插件制作（自带）；PF=TRUE �
 Hypertext（HTML / Markdown 原生渲染窗口）：
 
 
-
-
-
 make AHTML ={ <h1>标题</h1> } & out AHTML --E;
 
 
@@ -114,7 +108,6 @@ make AMD{ # Markdown **加粗** } & out AMD;
 
 
 link（默认浏览器打开，https 协商失败自动降级 http，本地 IP 默认 http）：
-
 
 
 link(example.com);
@@ -129,7 +122,6 @@ link(example.com) TO root/admin/abc;
 MADE-P（用 fua 制作插件）：
 
 
-
 mp ABC={ out "插件函数"; };
 
 
@@ -137,7 +129,6 @@ mp ABC(123){ out "参数:123"; };
 
 
 mp ot MyPlugin.fmp PATH=C:\abcde\abc;    | 导出 .fmp 插件包
-
 
 
 导出的 .fmp 可在 IDE「工具 → 导入 .fmp 安装」或市场安装； 其他文件中 INSERT 插件名 FROM EDL; 即可调用其中的 mp 函数。
