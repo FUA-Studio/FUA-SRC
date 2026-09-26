@@ -1,0 +1,12 @@
+#FUA-PLUGIN
+# NAME: Hypertext
+# VERSION: 1.0
+# AUTHOR: fua 官方
+# DESC: 超文本渲染：make AHTML / make AMD 输出并原生渲染 HTML 与 Markdown
+---
+| 本插件由解释器内置实现，此文件仅作为元数据与说明。
+| 安装：在编辑器 插件市场 中下载。
+| 启用方式：在 .fs 文件开头写  INSERT Hypertext FROM EDL
+| 命令：
+|   make AHTML ={ <h1>你好</h1> }; & out AHTML --E;   设定 HTML 并在原生窗口渲染
+|   make AMD{ # 标题 **加粗** }; & out AMD;            设定 Markdown 并渲染

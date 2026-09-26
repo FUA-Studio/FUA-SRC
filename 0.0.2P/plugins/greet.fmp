@@ -1,0 +1,13 @@
+#FUA-PLUGIN
+# NAME: greet
+# VERSION: 1.1
+# AUTHOR: 示例作者
+# DESC: 问候插件（纯 fua 制作）：greet('名字'); 输出问候语，count(to=10) 计数
+---
+mp greet(123){
+    out "你好, 123! 欢迎使用 fua src 插件系统。" --E;
+};
+mp count(123){
+    set (I=1);
+    loop (out I --E; set (I=I+1);) when (I=123) TIME=0.05;
+};
